@@ -19,7 +19,7 @@ Then relevant recipes including selected ingredients are shown
 When selcting drink
 then full recipe is shown
 
-Server-side API:
+Server-side APIs:
 1. https://api-ninjas.com/api/cocktail
 2. https://www.thecocktaildb.com/api.php
 3. https://bulma.io/s
