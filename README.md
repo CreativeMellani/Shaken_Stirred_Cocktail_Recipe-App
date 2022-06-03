@@ -22,7 +22,7 @@ then full recipe is shown
 Server-side API:
 1. https://api-ninjas.com/api/cocktail
 2. https://www.thecocktaildb.com/api.php
-3. http://getskeleton.com/ 
+3. https://bulma.io/s
 
 
 
