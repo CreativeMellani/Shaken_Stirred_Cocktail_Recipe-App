@@ -36,4 +36,4 @@ Elaine: HTMl/ Javascript
 
 Douglas: CSS/ Javascript
 
-MJ: Project Management/ Javascript 
+MJ: Project Management/ Wireframe/ Javascript 
