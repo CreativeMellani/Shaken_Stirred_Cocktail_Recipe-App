@@ -1,6 +1,6 @@
-# Shaken_Stirred_Cocktail_Recipe-App
+Shaken_Stirred_Cocktail_Recipe-App
 
-// User Story:
+User Story:
 As developers, we want to create an app targeted toward at-home bartenders/ cocktail enthusiasts. 
 We want to help the user create cocktails/mocktails
 So that the user can successfully curate drinks using ingredients they have on hand by providing recipes that match.
@@ -22,6 +22,7 @@ then full recipe is shown
 
 Wire frame:
 <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F8DcXcozdHL2OlbLYThKlWn%2FUntitled%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+![Screen Shot 2022-06-02 at 9 37 52 PM](https://user-images.githubusercontent.com/101590432/171787584-e5bd8024-ef7d-4fd1-a799-2e2065962569.png)
 
 Server-side APIs:
 1. https://api-ninjas.com/api/cocktail
