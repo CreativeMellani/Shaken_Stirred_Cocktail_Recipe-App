@@ -5,7 +5,9 @@ var alchoholType
 
 //MJ:When asked dirnking age 
 //Then use is prensented with either alcholic or non-alcholic options
-// modal here 
+
+
+//This function makes the modal popup once the browser is opened
 
 function openModalOnRefresh(){
     const modalDiv = document.getElementById('modal-js-example')
