@@ -3,6 +3,7 @@ var ingredientList
 var alchoholType
 
 
+
 //MJ:When asked dirnking age 
 //Then use is prensented with either alcholic or non-alcholic options
 
@@ -14,6 +15,11 @@ function openModalOnRefresh(){
     modalDiv.classList.add('is-active');
 }
 openModalOnRefresh()
+
+// Yes button
+
+// No button
+
 
 // Functions to open and close a modal
 function openModal($el) {
@@ -58,6 +64,9 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
+
+
+// Drink Randomizer Modal
 
 //MJ:When selecting possible ingredients 
 //Then relevant recipes including selected ingredients are shown
