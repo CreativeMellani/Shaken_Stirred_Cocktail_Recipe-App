@@ -31,6 +31,9 @@ Team breakdown:
 Elaine: HTMl/ Flow Diagram/ Javascript: https://app.flowmapp.com/projects/275524/userflow/191194/ 
 
 Douglas: CSS/ WireFrame Javascript: https://www.figma.com/file/8DcXcozdHL2OlbLYThKlWn/Shaken-%26-Stirred-Cocktail-Mobile-App?node-id=42%3A5
+![Screen Shot 2022-06-07 at 6 51 46 PM](https://user-images.githubusercontent.com/101590432/172514286-e6261a48-8966-4bd4-878f-43d4cc6b9d17.png)
+
+
 
 MJ: Project Management/ Wireframe/ Javascript: Wire frame:![Screen Shot 2022-06-02 at 9 37 52 PM](https://user-images.githubusercontent.com/101590432/171787584-e5bd8024-ef7d-4fd1-a799-2e2065962569.png)
 
