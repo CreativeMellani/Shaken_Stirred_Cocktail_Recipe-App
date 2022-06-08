@@ -4,8 +4,30 @@
     display: none;
 }
 
+.open-btn{ 
+    text-align: center;
+}
+
 .close-btn{
     color: red;
 }
 
-Moda
+.modal-content{
+    width: 320px;
+    height: 320px;
+    align-content: center;
+}
+
+.box{
+   width: 320px;
+   height: 320px;
+   align-content: center;
+}
+
+.h3{
+    text-align: center;
+}
+
+.gif {
+    align-items: center;
+}

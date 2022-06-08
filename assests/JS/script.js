@@ -66,8 +66,7 @@ document.addEventListener('keydown', (event) => {
 
 
 
-// Drink Randomizer Modal
-
+// Drink Randomizer 
 //MJ:When selecting possible ingredients 
 //Then relevant recipes including selected ingredients are shown
 
