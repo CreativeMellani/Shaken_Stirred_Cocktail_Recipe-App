@@ -1,1 +1,11 @@
 
+/* MJ: adds class display removes hide */
+.hide{
+    display: none;
+}
+
+.close-btn{
+    color: red;
+}
+
+Moda
