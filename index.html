@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaken & Stirred Cocktail Recipe</title>
+    <!--EL: Bulma framework Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!--EL: CSS stylesheet -->
+    <link rel="stylesheet" href="./assests/CSS/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Shaken & Stirred Cocktail Recipe</h1>
+    </header>
+
+    <div>
+        <!--EL: nav bar links -->
+        <nav>
+            <a href="#Home">Home</a>
+            <a href="#Search">Search</a>
+            <a href="#About">About</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+        <!--EL: hero image -->
+        <img src="assests/hero-img.jpeg" alt="cocktail recipe">
+
+
+        <!-- MJ: Drinking age pop up modal. Following this tutorial: https://www.youtube.com/watch?v=MBaw_6cPmAw  -->
+        <!-- MJ: This button opens our modal -->
+        <!-- <button>Open Modal (Drinking Age Restrictions)</button>  -->
+
+        <!--  -->
+        <!-- <div class="modal hide" id="modal"> -->
+
+        <!-- <div class="modalHeader">Are you 21+?  -->
+        <!-- inside our header we're setting up our title & closing button  -->
+        <!-- <div class="title"> Example Modal -->
+        <!-- </div> -->
+        <!--MJ: This button closes our modal. using html entity &times; instead of just the character x  -->
+        <!-- <button class="closeBtn">&times;</button> -->
+        <!-- </div> -->
+
+        <!-- MJ: used Lorem5 in the body   -->
+        <!-- <div class="modalBody">Lorem ipsum dolor sit amet. -->
+        <!-- </div> -->
+
+        <!-- <div id="overLay"></div> -->
+        <!-- </div> -->
+
+
+        <!-- Updated modal using bulma api -->
+
+        <div id="modal-js-example" class="modal">
+
+            <div class="modal-background"></div>
+
+            <div class="modal-content">
+                <div class="box">
+                    <h1 class="h3"> Are you 21 and over?</h1>
+                    <iframe src="https://giphy.com/embed/26tn9Pg6SdOKto56E" width="240" height="168" frameBorder="0"
+                        class="giphy-embed" allowFullScreen></iframe>
+                    <p><a href="https://giphy.com/gifs/cocktail-absolutvodka-absolutwildtea-26tn9Pg6SdOKto56E"></a></p>
+                    <!-- Your content -->
+                    <button id="openBtn" class="open-btn"> Yes, first round is on me!</button>
+                    <button id="closeBtn" class="close-btn">No, show me the mocktails!</button>
+                </div>
+            </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+        </div>
+
+
+    </div>
+
+    <!-- MJ :drink randomizer trigger button -->
+    <button class="js-modal-trigger" data-target="drinkRandomizer">
+        Drink Randomizer, Get the party started!
+      </button>
+
+      <!-- MJ :drink randomizer trigger button -->
+    <div id="drinkRandomizer" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Chose your ingredients:</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+
+                <!-- Content ... -->
+                <iframe src="https://giphy.com/embed/l46CCfwNTZ1ylwk3C" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/love-lemonade-lazy-mom-l46CCfwNTZ1ylwk3C"></a></p>
+
+        <div>
+            Spirits & Liqueurs
+        </div>
+            <div>
+                <label class="checkbox">
+                 <ul>
+                   <li> <input type="checkbox"> Vodka </li>
+                   <li> <input type="checkbox"> Tequila </li>
+                   <li> <input type="checkbox"> Rum </li>
+                   <li> <input type="checkbox"> Gin </li>
+                   <li> <input type="checkbox"> Bourbon </li>
+                   <li> <input type="checkbox"> Scotch </li>
+                   <li> <input type="checkbox"> Whiskey </li>
+                   <li> <input type="checkbox"> Wine</li>
+                   <li> <input type="checkbox"> Champagne </li>
+                
+                  </label>
+                </ul>
+            </div>
+
+            <div>
+                Seltzers & Sodas
+            </div>
+                <div>
+                    <label class="checkbox">
+                     <ul>
+                       <li> <input type="checkbox"> Ginger Ale </li>
+                       <li> <input type="checkbox"> Sprite</li>
+                       <li> <input type="checkbox"> Coca Cola </li>
+                       <li> <input type="checkbox"> Sparkling Water </li>
+        
+            <div>
+                Fruits & Juices
+            </div>
+                <div>
+                    <label class="checkbox">
+                     <ul>
+                       <li> <input type="checkbox"> Peach </li>
+                       <li> <input type="checkbox"> Pear</li>
+                       <li> <input type="checkbox"> Orange </li>
+                       <li> <input type="checkbox"> Cherry </li>
+                       <li> <input type="checkbox"> Blueberry </li>
+                       <li> <input type="checkbox"> Strawberry </li>
+                    
+                    
+                      </label>
+                    </ul>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success">Save changes</button>
+                <button class="button">Cancel</button>
+            </footer>
+        </div>
+    </div>
+
+
+
+
+    <div>
+        <p>Drinks of the Week</p>
+        <button type="button" class="drinkweek1">Drink #1</button>
+        <button type="button" class="drinkweek2">Drink #2</button>
+        <button type="button" class="drinkweek3">Drink #3</button>
+    </div>
+
+    <footer class="disclaimer">
+        <p>Disclaimer!</p>
+        <p>Do not consume alcohol if you are not of legal drinking age. Drinking excessively will cause harm to your
+            body and mind. Never drink and drive</p>
+    </footer>
+
+
+
+    <script src="./assests/JS/script.js"></script>
+</body>
+
+</html>
