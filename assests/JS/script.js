@@ -1,3 +1,4 @@
+
 //MJ:Declare global vars 
 var ingredientList
 var alchoholType
@@ -94,4 +95,5 @@ document.addEventListener('keydown', (event) => {
 
 //MJ:When selcting drink 
 //Then full recipe is shown
+
 

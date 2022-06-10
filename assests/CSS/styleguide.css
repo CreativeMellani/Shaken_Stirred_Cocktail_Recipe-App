@@ -1,0 +1,60 @@
+:root { 
+  --black: #000000;
+  --perano: #a4b9ec;
+  --san-marino: #4568aa;
+  --thunder: #352d2d;
+  --white: #ffffff;
+ 
+  --font-size-l: 18px;
+  --font-size-m: 14px;
+  --font-size-s: 12px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+  --font-size-xxxl: 35px;
+  --font-size-xxxxl: 40px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+}
+.inter-normal-black-24px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+
+
+}
+
+
+/* MJ: adds class display removes hide */
+.hide{
+  display: none;
+}
+
+.open-btn{ 
+  text-align: center;
+}
+
+.close-btn{
+  color: red;
+}
+
+.modal-content{
+  width: 320px;
+  height: 320px;
+  align-content: center;
+}
+
+.box{
+ width: 320px;
+ height: 320px;
+ align-content: center;
+}
+
+.h3{
+  text-align: center;
+}
+
+.gif {
+  align-items: center;
+}
