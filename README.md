@@ -20,10 +20,6 @@ When selcting drink
 then full recipe is shown
 
 
-Wire frame:
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F8DcXcozdHL2OlbLYThKlWn%2FUntitled%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
-![Screen Shot 2022-06-02 at 9 37 52 PM](https://user-images.githubusercontent.com/101590432/171787584-e5bd8024-ef7d-4fd1-a799-2e2065962569.png)
-
 Server-side APIs:
 1. https://api-ninjas.com/api/cocktail
 2. https://www.thecocktaildb.com/api.php
@@ -32,8 +28,12 @@ Server-side APIs:
 
 Team breakdown:
 
-Elaine: HTMl/ Javascript 
+Elaine: HTMl/ Flow Diagram/ Javascript: https://app.flowmapp.com/projects/275524/userflow/191194/ 
 
-Douglas: CSS/ Javascript
+Douglas: CSS/ WireFrame Javascript: https://www.figma.com/file/8DcXcozdHL2OlbLYThKlWn/Shaken-%26-Stirred-Cocktail-Mobile-App?node-id=42%3A5
+![Screen Shot 2022-06-07 at 6 51 46 PM](https://user-images.githubusercontent.com/101590432/172514286-e6261a48-8966-4bd4-878f-43d4cc6b9d17.png)
 
-MJ: Project Management/ Wireframe/ Javascript 
+
+
+MJ: Project Management/ Wireframe/ Javascript: Wire frame:![Screen Shot 2022-06-02 at 9 37 52 PM](https://user-images.githubusercontent.com/101590432/171787584-e5bd8024-ef7d-4fd1-a799-2e2065962569.png)
+
