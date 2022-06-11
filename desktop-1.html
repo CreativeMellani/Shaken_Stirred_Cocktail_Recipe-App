@@ -15,19 +15,13 @@
     <input type="hidden" id="anPageName" name="page" value="desktop-1" />
     <div class="container-center-horizontal">
       <div class="iphone-13-13-pro-1 screen">
-        <div class="over-container">
-          <div class="are-you-21-and-over-2">Are you 21 and over?</div>
-          <div class="overlap-group1-2"><div class="yes-2 valign-text-middle">YES</div></div>
-        </div>
         <div class="rectangle-17-2"></div>
         <div class="shaken-stirred-cocktail-recipe-app-1 bp3-animate-enter">
           Shaken &amp; Stirred Cocktail Recipe App
         </div>
         <div class="drink-of-the-week-2">Drink of the week!</div>
         <img class="rectangle-18-2" src="assests/img/rectangle-18-2@2x.svg" />
-        <div class="yes-button-1">
-          <div class="overlap-group-2"><div class="place-2 valign-text-middle">NO</div></div>
-        </div>
+        
         <img class="old-fashioned-2" src="assests/img/old-fashioned-2@1x.png" />
       </div>
     </div>
@@ -66,11 +60,7 @@
           <div class="flex-col-3">
             <h1 class="title bp1-animate-enter">Shaken &amp; Stirred Cocktail Recipe App</h1>
             <div class="overlap-group1">
-              <div class="yes-button"></div>
-              <div class="button-no"></div>
-              <div class="yes valign-text-middle inter-normal-black-24px">YES</div>
-              <div class="place valign-text-middle inter-normal-black-24px">NO</div>
-              <div class="are-you-21-and-over">Are you 21 and over?</div>
+            
             </div>
           </div>
         </div>
@@ -102,109 +92,9 @@
         </div>
       </div>
     </div>
-    <script>
-      function ShowOnScroll() {
-        this.toShow = [];
-        this.nextEventY = undefined;
-      }
 
-      ShowOnScroll.prototype.show = function (e) {
-        e.style.display = "";
-      };
-
-      ShowOnScroll.prototype.hide = function (e) {
-        e.style.display = "none";
-      };
-
-      ShowOnScroll.prototype.getTop = function (e) {
-        if (e.Top != undefined && e.Top != 0) {
-          return e.Top;
-        }
-        var top = 0;
-        var iter = e;
-        do {
-          top += iter.offsetTop || 0;
-          iter = iter.offsetParent;
-        } while (iter);
-        e.Top = top;
-        return top;
-      };
-
-      ShowOnScroll.prototype.onScroll = function () {
-        var screenBottom = window.pageYOffset + window.innerHeight;
-        if (this.nextEventY == undefined || this.nextEventY > screenBottom) {
-          return;
-        }
-        this.nextEventY = undefined;
-        for (var i = 0; i < this.toShow.length; i++) {
-          var e = this.toShow[i];
-          var top = this.getTop(e);
-          if (top < screenBottom) {
-            this.show(e);
-            this.toShow.shift();
-            i--;
-          } else {
-            this.nextEventY = top;
-            break;
-          }
-        }
-      };
-
-      ShowOnScroll.prototype.resetScrolling = function () {
-        // Clear state
-        var screenBottom = window.pageYOffset + window.innerHeight;
-        for (var i = 0; i < this.toShow.length; i++) {
-          var e = this.toShow[i];
-          this.show(e);
-        }
-        this.toShow = [];
-        this.nextEventY == undefined;
-
-        // Collect items
-        var itemsToShowOnScroll = Array.prototype.slice.call(document.getElementsByTagName("*"));
-        itemsToShowOnScroll = itemsToShowOnScroll.filter(function (e) {
-          return e.getAttribute("show-on-scroll") != undefined;
-        });
-        var getTop = this.getTop;
-        itemsToShowOnScroll.sort(function (a, b) {
-          return getTop(a) - getTop(b);
-        });
-        for (var i = 0; i < itemsToShowOnScroll.length; i++) {
-          var e = itemsToShowOnScroll[i];
-          var top = this.getTop(e);
-          if (top < screenBottom) {
-            continue;
-          }
-          this.toShow.push(e);
-          this.hide(e);
-          this.nextEventY = this.nextEventY != undefined ? this.nextEventY : top;
-        }
-      };
-
-      ShowOnScroll.prototype.handleEvent = function (e) {
-        switch (e.type) {
-          case "scroll":
-            this.onScroll();
-            break;
-          case "resize":
-            this.resetScrolling();
-            break;
-        }
-      };
-
-      ShowOnScroll.prototype.init = function () {
-        this.resetScrolling();
-        window.addEventListener("scroll", this);
-        window.addEventListener("resize", this);
-      };
-
-      // After anima-src
-      setTimeout(function () {
-        var instShowOnScroll = new ShowOnScroll();
-        instShowOnScroll.init();
-      }, 250);
-    </script>
   </body>
+  <script src="./assests/JS/script.js"></script>
 
 
   

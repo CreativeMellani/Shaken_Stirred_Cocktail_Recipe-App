@@ -1,20 +1,9 @@
-// var cocktail = 'bloody mary';
-// $.ajax({
-//     url: 'https://api.api-ninjas.com/v1/cocktail?name=' + cocktail,
-//     method: 'GET',
-//     headers: { 'X-Api-Key': 'hMzMH+MBft5+cJHF/Lmajw==dN7wK4DXcPXKuOva'},
-
-//MJ:Declare global vars 
-var ingredientList
-var alchoholType
-
 
 
 //MJ:When asked dirnking age 
-//Then use is prensented with either alcholic or non-alcholic options
+//Then use is prensented with alcholic 
 
-
-//This function makes the modal popup once the browser is opened
+//MJ:This function makes the modal popup once the browser is opened
 
 function openModalOnRefresh(){
     const modalDiv = document.getElementById('modal-js-example')
@@ -22,12 +11,26 @@ function openModalOnRefresh(){
 }
 openModalOnRefresh()
 
-// Yes button
 
-// No button
+//MJ:Age Restriction Modal
+//if yes
+var over21 = document.getElementById("over21");
+over21.addEventListener("click", function(){
+    console.log ("over21")
+    localStorage.setItem("over21","true")
+})
+// if no
+var under21 = document.getElementById("under21")
+under21.addEventListener("click", function(){
+    console.log ("under21")
+    localStorage.setItem("under21","true")
+})
 
 
-// Functions to open and close a modal
+
+
+
+//MJ: Functions to open and close a modal
 function openModal($el) {
     $el.classList.add('is-active');
 }
@@ -81,49 +84,104 @@ document.addEventListener('keydown', (event) => {
 //modal here
 
 
-//MJ:Drink options
-// var name = 'bloody mary'
-// $.ajax({
-//     // method: 'GET',
-//     url: 'https://api.api-ninjas.com/v1/cocktail?name=' + name,
-//     headers: { 'X-Api-Key': 'YOUR_API_KEY'},
-//     contentType: 'application/json',
-//     success: function(result) {
-//         console.log(result);
-//     },
-//     error: function ajaxError(jqXHR) {
-//         console.error('Error: ', jqXHR.responseText);
-//     }
-// });
+//Doug: Title Animation
+function ShowOnScroll() {
+    this.toShow = [];
+    this.nextEventY = undefined;
+  }
 
+  ShowOnScroll.prototype.show = function (e) {
+    e.style.display = "";
+  };
 
+  ShowOnScroll.prototype.hide = function (e) {
+    e.style.display = "none";
+  };
 
-// $.ajax({
-//     url: 'www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic',
-//     method: 'GET',
-//     headers: { 'X-Api-Key': '1'},
-//     contentType: 'application/json',
-//     success: function(result) {
-//         console.log(result);
-//     },
-//     error: function ajaxError(jqXHR) {
-//         console.error('Error: ', jqXHR.responseText);
-//     }
-// });
+  ShowOnScroll.prototype.getTop = function (e) {
+    if (e.Top != undefined && e.Top != 0) {
+      return e.Top;
+    }
+    var top = 0;
+    var iter = e;
+    do {
+      top += iter.offsetTop || 0;
+      iter = iter.offsetParent;
+    } while (iter);
+    e.Top = top;
+    return top;
+  };
 
-$.ajax({
-    url:'www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita',
-    method:'GET'
-}).then(function (response) {
-console.log(response)
-})
+  ShowOnScroll.prototype.onScroll = function () {
+    var screenBottom = window.pageYOffset + window.innerHeight;
+    if (this.nextEventY == undefined || this.nextEventY > screenBottom) {
+      return;
+    }
+    this.nextEventY = undefined;
+    for (var i = 0; i < this.toShow.length; i++) {
+      var e = this.toShow[i];
+      var top = this.getTop(e);
+      if (top < screenBottom) {
+        this.show(e);
+        this.toShow.shift();
+        i--;
+      } else {
+        this.nextEventY = top;
+        break;
+      }
+    }
+  };
 
+  ShowOnScroll.prototype.resetScrolling = function () {
+    // Clear state
+    var screenBottom = window.pageYOffset + window.innerHeight;
+    for (var i = 0; i < this.toShow.length; i++) {
+      var e = this.toShow[i];
+      this.show(e);
+    }
+    this.toShow = [];
+    this.nextEventY == undefined;
 
-// var drinkingAge = $(."21overbutton");
-// var underAge = $(."under21button");
-// 21over.click(function() {
-//     if (21over == "")
-// })
-//MJ:When selcting drink 
-//Then full recipe is shown
+    // Collect items
+    var itemsToShowOnScroll = Array.prototype.slice.call(document.getElementsByTagName("*"));
+    itemsToShowOnScroll = itemsToShowOnScroll.filter(function (e) {
+      return e.getAttribute("show-on-scroll") != undefined;
+    });
+    var getTop = this.getTop;
+    itemsToShowOnScroll.sort(function (a, b) {
+      return getTop(a) - getTop(b);
+    });
+    for (var i = 0; i < itemsToShowOnScroll.length; i++) {
+      var e = itemsToShowOnScroll[i];
+      var top = this.getTop(e);
+      if (top < screenBottom) {
+        continue;
+      }
+      this.toShow.push(e);
+      this.hide(e);
+      this.nextEventY = this.nextEventY != undefined ? this.nextEventY : top;
+    }
+  };
 
+  ShowOnScroll.prototype.handleEvent = function (e) {
+    switch (e.type) {
+      case "scroll":
+        this.onScroll();
+        break;
+      case "resize":
+        this.resetScrolling();
+        break;
+    }
+  };
+
+  ShowOnScroll.prototype.init = function () {
+    this.resetScrolling();
+    window.addEventListener("scroll", this);
+    window.addEventListener("resize", this);
+  };
+
+  // After anima-src
+  setTimeout(function () {
+    var instShowOnScroll = new ShowOnScroll();
+    instShowOnScroll.init();
+  }, 250);
