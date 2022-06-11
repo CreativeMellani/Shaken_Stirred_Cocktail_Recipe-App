@@ -180,7 +180,7 @@ function ShowOnScroll() {
     window.addEventListener("resize", this);
   };
 
-  // After anima-src
+  
   setTimeout(function () {
     var instShowOnScroll = new ShowOnScroll();
     instShowOnScroll.init();
