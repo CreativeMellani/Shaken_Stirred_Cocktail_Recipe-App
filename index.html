@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaken & Stirred Cocktail Recipe</title>
-    <!--EL: Bulma framework Link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <!--EL: CSS stylesheet -->
-    <link rel="stylesheet" href="./assests/CSS/style.css" />
-</head>
-
-<body>
-    <header>
-        <h1>Shaken & Stirred Cocktail Recipe</h1>
-    </header>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shaken & Stirred Cocktail Recipe</title>
+        <!--EL: Bulma framework Link -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <!--EL: CSS stylesheet -->
+        <link rel="stylesheet" href="assests/CSS/styleguide.css" />
+    </head>
+    
+    <body>
+        <header>
+            <h1>Shaken & Stirred Cocktail Recipe</h1>
+        </header>
+        
+        <!-- Updated modal using bulma api -->
+        
+        <div id="modal-js-example" class="modal">
+        
+            <div class="modal-background"></div>
+        
+            <div class="modal-content">
+                <div class="box">
+                    <h1 class="h3"> Are you 21 and over?</h1>
+                    <iframe src="https://giphy.com/embed/26tn9Pg6SdOKto56E" width="240" height="168" frameBorder="0"
+                        class="giphy-embed" allowFullScreen></iframe>
+                    <p><a href="https://giphy.com/gifs/cocktail-absolutvodka-absolutwildtea-26tn9Pg6SdOKto56E"></a></p>
+                    <!-- Your content -->
+                    <button id="over21" class="open-btn"> Yes, first round is on me!</button>
+                    <button id="under21" class="close-btn">No</button>
+                </div>
+            </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+        </div>
+        
+        
+        </div>
     <div>
         <!--EL: nav bar links -->
         <nav>
@@ -52,28 +74,6 @@
         <!-- </div> -->
 
 
-        <!-- Updated modal using bulma api -->
-
-        <div id="modal-js-example" class="modal">
-
-            <div class="modal-background"></div>
-
-            <div class="modal-content">
-                <div class="box">
-                    <h1 class="h3"> Are you 21 and over?</h1>
-                    <iframe src="https://giphy.com/embed/26tn9Pg6SdOKto56E" width="240" height="168" frameBorder="0"
-                        class="giphy-embed" allowFullScreen></iframe>
-                    <p><a href="https://giphy.com/gifs/cocktail-absolutvodka-absolutwildtea-26tn9Pg6SdOKto56E"></a></p>
-                    <!-- Your content -->
-                    <button id="openBtn" class="open-btn"> Yes, first round is on me!</button>
-                    <button id="closeBtn" class="close-btn">No, show me the mocktails!</button>
-                </div>
-            </div>
-            <button class="modal-close is-large" aria-label="close"></button>
-        </div>
-
-
-    </div>
 
     <!-- MJ :drink randomizer trigger button -->
     <button class="js-modal-trigger" data-target="drinkRandomizer">
@@ -150,86 +150,67 @@
     </div>
 
 
-
-
-    <div>
-        <p>Drinks of the Week</p>
-        <button type="button" class="drinkweek1">Drink #1</button>
-        <button type="button" class="drinkweek2">Drink #2</button>
-        <button type="button" class="drinkweek3">Drink #3</button>
-    </div>
-
-    <footer class="disclaimer">
-        <p>Disclaimer!</p>
-        <p>Do not consume alcohol if you are not of legal drinking age. Drinking excessively will cause harm to your
-            body and mind. Never drink and drive</p>
-    </footer>
-
-
-
-    <script src="./assests/JS/script.js"></script>
-
-
-
-<!--This is the begining of the code I did. Can you work this into the HTML?-->
-<div class="desktop-1screen">
-    <div class="overlap-group-1">
-      <img
-        class="rectangle-18-1"
-        src="https://anima-uploads.s3.amazonaws.com/projects/629e9945e3ebcb0f782c0f94/releases/629ea79406e6bc7f567166cb/img/rectangle-18-1@1x.svg"
-      />
-      <div class="flex-col">
-        <div class="flex-row">
-          <img
-            class="pexels-lisa-fotios-109275-1"
-            src="https://anima-uploads.s3.amazonaws.com/projects/629e9945e3ebcb0f782c0f94/releases/629ea79406e6bc7f567166cb/img/pexels-lisa-fotios-109275-1-1@2x.png"
-          />
-          <div class="flex-col-1">
-            <div class="drink-of-the-week-1">Drink of the week!</div>
-            <div class="rectangle-17-1"></div>
-          </div>
-        </div>
-        <div class="flex-col-2">
-          <div class="flex-row-1">
-            <img
-              class="blended-drink-1"
-              src="https://anima-uploads.s3.amazonaws.com/projects/629e9945e3ebcb0f782c0f94/releases/629ea79406e6bc7f567166cb/img/blended-drink-1-1@2x.png"
-            /><img
-              class="flex-row-item"
-              src="https://anima-uploads.s3.amazonaws.com/projects/629e9945e3ebcb0f782c0f94/releases/629ea79406e6bc7f567166cb/img/2-drinks-1-1@2x.png"
-            /><img
-              class="flex-row-item"
-              src="https://anima-uploads.s3.amazonaws.com/projects/629e9945e3ebcb0f782c0f94/releases/629ea79406e6bc7f567166cb/img/tropical-3-1@2x.png"
-            />
-          </div>
-          <p class="by-accessing-this-siinter-normal-white-14px">
-            By accessing this Site, you acknowledge that there is a government warning concerning the health effects of consuming alcoholic
-            beverages:<br />Government warning: (1) According to the Surgeon General, women should not drink alcoholic beverages during
-            pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or
-            operate machinery, and may cause health problems. Drink responsibly.
-          </p>
-        </div>
-      </div>
-      <img
-        class="pexels-anna-tukhfatu"
-        src="https://anima-uploads.s3.amazonaws.com/projects/629e9945e3ebcb0f782c0f94/releases/629ea79406e6bc7f567166cb/img/pexels-anna-tukhfatullina-food-photographerstylist-2611816-1@2x.png"
-      />
-      <div class="rectangle-19"></div>
-      <div class="flex-col-3">
-        <h1 class="titlebp2-animate-enter">Shaken &amp; Stirred Cocktail Recipe App</h1>
-        <div class="overlap-group1-1">
-          <div class="yes-button-1"></div>
-          <div class="button-no"></div>
-          <div class="yes-1valign-text-middleinter-normal-black-24px">YES</div>
-          <div class="place-1valign-text-middleinter-normal-black-24px">NO</div>
-          <div class="are-you-21-and-over-1">Are you 21 and over?</div>
-        </div>
-      </div>
-    </div>
-
-
     
-  </div>
+    
+    
+    
+    
+    <!--This is the begining of the code I did. Can you work this into the HTML?-->
+    <div class="desktop-1screen">
+        <div class="overlap-group-1">
+            <!-- <img
+                class="rectangle-18-1"
+                src="https://anima-uploads.s3.amazonaws.com/projects/629e9945e3ebcb0f782c0f94/releases/629ea79406e6bc7f567166cb/img/rectangle-18-1@1x.svg"
+                /> -->
+                <div class="flex-col">
+                    <div class="flex-row">
+                        <img
+                        class="pexels-lisa-fotios-109275-1"
+                        src="https://anima-uploads.s3.amazonaws.com/projects/629e9945e3ebcb0f782c0f94/releases/629ea79406e6bc7f567166cb/img/pexels-lisa-fotios-109275-1-1@2x.png"
+                        />
+                        <div class="flex-col-1">
+                            <div class="drink-of-the-week-1">Drink of the week!</div>
+                            <div class="rectangle-17-1"></div>
+                        </div>
+                    </div>
+                    <div class="flex-col-2">
+                        <div class="flex-row-1">
+                            <img
+                            class="blended-drink-1"
+                            src="https://anima-uploads.s3.amazonaws.com/projects/629e9945e3ebcb0f782c0f94/releases/629ea79406e6bc7f567166cb/img/blended-drink-1-1@2x.png"
+                            /><img
+                            class="flex-row-item"
+                            src="https://anima-uploads.s3.amazonaws.com/projects/629e9945e3ebcb0f782c0f94/releases/629ea79406e6bc7f567166cb/img/2-drinks-1-1@2x.png"
+                            /><img
+                            class="flex-row-item"
+                            src="https://anima-uploads.s3.amazonaws.com/projects/629e9945e3ebcb0f782c0f94/releases/629ea79406e6bc7f567166cb/img/tropical-3-1@2x.png"
+                            />
+                            <footer class="disclaimer">
+                                <p>Disclaimer!</p>
+                                <p>Do not consume alcohol if you are not of legal drinking age. Drinking excessively will cause harm to your
+                                    body and mind. Never drink and drive</p>
+                            </footer>
+                        </div>
+                        <p class="by-accessing-this-siinter-normal-white-14px">
+                            By accessing this Site, you acknowledge that there is a government warning concerning the health effects of consuming alcoholic
+                            beverages:<br />Government warning: (1) According to the Surgeon General, women should not drink alcoholic beverages during
+                            pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or
+                            operate machinery, and may cause health problems. Drink responsibly.
+                        </p>
+                    </div>
+                </div>
+                <img
+                class="pexels-anna-tukhfatu"
+                src="https://anima-uploads.s3.amazonaws.com/projects/629e9945e3ebcb0f782c0f94/releases/629ea79406e6bc7f567166cb/img/pexels-anna-tukhfatullina-food-photographerstylist-2611816-1@2x.png"
+                />
+                <div class="rectangle-19"></div>
+                
+            </div>
+        
+        
+        
+    </div>
 </body>
+<script src="./assests/JS/script.js"></script>
 
 </html>

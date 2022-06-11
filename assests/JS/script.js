@@ -14,7 +14,7 @@ var alchoholType
 //Then use is prensented with either alcholic or non-alcholic options
 
 
-//This function makes the modal popup once the browser is opened
+//MJ:This function makes the modal popup once the browser is opened
 
 function openModalOnRefresh(){
     const modalDiv = document.getElementById('modal-js-example')
@@ -22,9 +22,20 @@ function openModalOnRefresh(){
 }
 openModalOnRefresh()
 
-// Yes button
 
-// No button
+//MJ:Age Restriction Modal
+
+var over21 = document.getElementById("over21");
+over21.addEventListener("click", function(){
+    console.log ("over21")
+
+    localStorage.setItem("over21","true")
+})
+// 
+var under21 = document.getElementById("under21")
+
+
+
 
 
 // Functions to open and close a modal
