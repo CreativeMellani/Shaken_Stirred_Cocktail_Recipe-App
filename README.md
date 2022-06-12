@@ -33,7 +33,7 @@ Elaine: HTMl/ Flow Diagram/ Javascript: https://app.flowmapp.com/projects/275524
 
 
 
-MJ: Project Management/ Wireframe/ Javascript: Wire frame:![Screen Shot 2022-06-02 at 9 37 52 PM](https://user-images.githubusercontent.com/101590432/171787584-e5bd8024-ef7d-4fd1-a799-2e2065962569.png)
+MJ: Project Management/ 1st Draft Wireframe/ Javascript:![Screen Shot 2022-06-02 at 9 37 52 PM](https://user-images.githubusercontent.com/101590432/171787584-e5bd8024-ef7d-4fd1-a799-2e2065962569.png)
 
 
 
