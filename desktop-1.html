@@ -1,43 +1,138 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
-    <meta name="og:type" content="website" />
-    <meta name="twitter:card" content="photo" />
-    <link rel="stylesheet" type="text/css" href="css/desktop-1.css" />
-    <style></style>
-    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
-    <link rel="stylesheet" type="text/css" href="css/globals.css" />
-  </head>
-  <body style="margin: 0; background: #ffffff">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+  <meta name="og:type" content="website" />
+  <meta name="twitter:card" content="photo" />
+  <!--EL: Bulma framework Link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <style></style>
+  <link rel="stylesheet" type="text/css" href="assests/CSS/styleguide.css" />
+</head>
+
+<body style="margin: 0; background: #ffffff">
+  <header>
+    <div class="shaken-stirred-cocktail-recipe-app-1 bp3-animate-enter"></div>
+  </header>
+
+  <!-- MJ:Updated modal using bulma api -->
+
+  <div id="modal-js-example" class="modal">
+
+    <div class="modal-background"></div>
+
+    <div class="modal-content">
+      <div class="box">
+        <h1 class="h3"> Are you 21 and over?</h1>
+        <iframe src="https://giphy.com/embed/26tn9Pg6SdOKto56E" width="240" height="168" frameBorder="0"
+          class="giphy-embed" allowFullScreen></iframe>
+        <p><a href="https://giphy.com/gifs/cocktail-absolutvodka-absolutwildtea-26tn9Pg6SdOKto56E"></a></p>
+        <!-- Your content -->
+        <button id="over21" class="open-btn"> Yes, first round is on me!</button>
+        <button id="under21" class="close-btn">No</button>
+      </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+<!-- Doug: -->
+  </div>
+  <div>
     <input type="hidden" id="anPageName" name="page" value="desktop-1" />
     <div class="container-center-horizontal">
       <div class="iphone-13-13-pro-1 screen">
-        <div class="over-container">
-          <div class="are-you-21-and-over-2">Are you 21 and over?</div>
-          <div class="overlap-group1-2"><div class="yes-2 valign-text-middle">YES</div></div>
-        </div>
         <div class="rectangle-17-2"></div>
-        <div class="shaken-stirred-cocktail-recipe-app-1 bp3-animate-enter">
-          Shaken &amp; Stirred Cocktail Recipe App
-        </div>
+
         <div class="drink-of-the-week-2">Drink of the week!</div>
-        <img class="rectangle-18-2" src="img/rectangle-18-2@2x.svg" />
-        <div class="yes-button-1">
-          <div class="overlap-group-2"><div class="place-2 valign-text-middle">NO</div></div>
-        </div>
-        <img class="old-fashioned-2" src="img/old-fashioned-2@1x.png" />
+        <img class="rectangle-18-2" src="assests/img/rectangle-18-2@2x.svg" />
+
+        <img class="old-fashioned-2" src="assests/img/old-fashioned-2@1x.png" />
       </div>
     </div>
     <div class="container-center-horizontal">
       <div class="desktop-1 screen">
         <div class="overlap-group">
-          <img class="rectangle-18" src="img/rectangle-18-1@1x.svg" />
+          <img class="rectangle-18" src="assests/img/rectangle-18-1@1x.svg" />
+      
+
+    <!-- MJ :drink randomizer trigger button -->
+  <div id="drinkRandomizer" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+          <header class="modal-card-head">
+              <p class="modal-card-title">Choose your ingredients:</p>
+              <button class="delete" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body">
+
+              <!-- Content ... -->
+              <iframe src="https://giphy.com/embed/l46CCfwNTZ1ylwk3C" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/love-lemonade-lazy-mom-l46CCfwNTZ1ylwk3C"></a></p>
+
+      <div>
+          Spirits & Liqueurs
+      </div>
+          <div>
+              <label class="checkbox">
+               <ul>
+                 <li> <input type="checkbox"> Vodka </li>
+                 <li> <input type="checkbox"> Tequila </li>
+                 <li> <input type="checkbox"> Rum </li>
+                 <li> <input type="checkbox"> Gin </li>
+                 <li> <input type="checkbox"> Bourbon </li>
+                 <li> <input type="checkbox"> Scotch </li>
+                 <li> <input type="checkbox"> Whiskey </li>
+                 <li> <input type="checkbox"> Wine</li>
+                 <li> <input type="checkbox"> Champagne </li>
+              
+                </label>
+              </ul>
+          </div>
+
+          <div>
+              Seltzers & Sodas
+          </div>
+              <div>
+                  <label class="checkbox">
+                   <ul>
+                     <li> <input type="checkbox"> Ginger Ale </li>
+                     <li> <input type="checkbox"> Sprite</li>
+                     <li> <input type="checkbox"> Coca Cola </li>
+                     <li> <input type="checkbox"> Sparkling Water </li>
+      
+          <div>
+              Fruits & Juices
+          </div>
+              <div>
+                  <label class="checkbox">
+                   <ul>
+                     <li> <input type="checkbox"> Peach </li>
+                     <li> <input type="checkbox"> Pear</li>
+                     <li> <input type="checkbox"> Orange </li>
+                     <li> <input type="checkbox"> Cherry </li>
+                     <li> <input type="checkbox"> Blueberry </li>
+                     <li> <input type="checkbox"> Strawberry </li>
+                  
+                  
+                    </label>
+                  </ul>
+              </div>
+          </section>
+          <footer class="modal-card-foot">
+              <button class="button is-success">Save changes</button>
+              <button class="button">Cancel</button>
+          </footer>
+      </div>
+  </div>
+
+
+  
+  
           <div class="flex-col">
             <div class="flex-row">
-              <img class="pexels-lisa-fotios-109275-1" src="img/pexels-lisa-fotios-109275-1-1@2x.png" />
+              <img class="pexels-lisa-fotios-109275-1" src="assests/img/pexels-lisa-fotios-109275-1@2x.png" />
               <div class="flex-col-1">
                 <div class="drink-of-the-week">Drink of the week!</div>
                 <div class="rectangle-17"></div>
@@ -45,9 +140,9 @@
             </div>
             <div class="flex-col-2">
               <div class="flex-row-1">
-                <img class="blended-drink-1" src="img/blended-drink-1-1@2x.png" />
-                <img class="flex-row-item" src="img/2-drinks-1-1@2x.png" />
-                <img class="flex-row-item" src="img/tropical-3-1@2x.png" />
+                <img class="blended-drink-1" src="assests/img/blended-drink-1@2x.png" />
+                <img class="flex-row-item" src="assests/img/2-drinks-1@2x.png" />
+                <img class="flex-row-item" src="assests/img/tropical-3-1@2x.png" />
               </div>
               <p class="by-accessing-this-si">
                 By accessing this Site, you acknowledge that there is a government warning concerning the health effects
@@ -58,19 +153,18 @@
               </p>
             </div>
           </div>
-          <img
-            class="pexels-anna-tukhfatu"
-            src="img/pexels-anna-tukhfatullina-food-photographerstylist-2611816-1@2x.png"
-          />
-          <div class="rectangle-19"></div>
+          <img class="pexels-anna-tukhfatu"
+            src="assests/img/pexels-anna-tukhfatullina-food-photographerstylist-2611816-1@2x.png" />
+          <div class="rectangle-19">
+                <!-- MJ :drink randomizer trigger button -->
+    <button class="js-modal-trigger" data-target="drinkRandomizer">
+      Drink Randomizer, Get the party started!
+    </button>
+          </div>
           <div class="flex-col-3">
             <h1 class="title bp1-animate-enter">Shaken &amp; Stirred Cocktail Recipe App</h1>
             <div class="overlap-group1">
-              <div class="yes-button"></div>
-              <div class="button-no"></div>
-              <div class="yes valign-text-middle inter-normal-black-24px">YES</div>
-              <div class="place valign-text-middle inter-normal-black-24px">NO</div>
-              <div class="are-you-21-and-over">Are you 21 and over?</div>
+
             </div>
           </div>
         </div>
@@ -96,116 +190,20 @@
           <img class="pexels-lisa-fotios-109275-1-1" src="img/pexels-lisa-fotios-109275-1-1@2x.png" />
           <img class="blended-drink-1-1" src="img/blended-drink-1-1@2x.png" />
           <img class="x2-drinks-1" src="img/2-drinks-1-1@2x.png" />
-          <div class="overlap-group-1"><div class="yes-1 valign-text-middle inter-normal-black-24px">YES</div></div>
-          <div class="overlap-group1-1"><div class="place-1 valign-text-middle inter-normal-black-24px">NO</div></div>
+          <div class="overlap-group-1">
+            <div class="yes-1 valign-text-middle inter-normal-black-24px">YES</div>
+          </div>
+          <div class="overlap-group1-1">
+            <div class="place-1 valign-text-middle inter-normal-black-24px">NO</div>
+          </div>
           <div class="drink-of-the-week-1">Drink of the week!</div>
         </div>
       </div>
     </div>
-    <script>
-      function ShowOnScroll() {
-        this.toShow = [];
-        this.nextEventY = undefined;
-      }
 
-      ShowOnScroll.prototype.show = function (e) {
-        e.style.display = "";
-      };
-
-      ShowOnScroll.prototype.hide = function (e) {
-        e.style.display = "none";
-      };
-
-      ShowOnScroll.prototype.getTop = function (e) {
-        if (e.Top != undefined && e.Top != 0) {
-          return e.Top;
-        }
-        var top = 0;
-        var iter = e;
-        do {
-          top += iter.offsetTop || 0;
-          iter = iter.offsetParent;
-        } while (iter);
-        e.Top = top;
-        return top;
-      };
-
-      ShowOnScroll.prototype.onScroll = function () {
-        var screenBottom = window.pageYOffset + window.innerHeight;
-        if (this.nextEventY == undefined || this.nextEventY > screenBottom) {
-          return;
-        }
-        this.nextEventY = undefined;
-        for (var i = 0; i < this.toShow.length; i++) {
-          var e = this.toShow[i];
-          var top = this.getTop(e);
-          if (top < screenBottom) {
-            this.show(e);
-            this.toShow.shift();
-            i--;
-          } else {
-            this.nextEventY = top;
-            break;
-          }
-        }
-      };
-
-      ShowOnScroll.prototype.resetScrolling = function () {
-        // Clear state
-        var screenBottom = window.pageYOffset + window.innerHeight;
-        for (var i = 0; i < this.toShow.length; i++) {
-          var e = this.toShow[i];
-          this.show(e);
-        }
-        this.toShow = [];
-        this.nextEventY == undefined;
-
-        // Collect items
-        var itemsToShowOnScroll = Array.prototype.slice.call(document.getElementsByTagName("*"));
-        itemsToShowOnScroll = itemsToShowOnScroll.filter(function (e) {
-          return e.getAttribute("show-on-scroll") != undefined;
-        });
-        var getTop = this.getTop;
-        itemsToShowOnScroll.sort(function (a, b) {
-          return getTop(a) - getTop(b);
-        });
-        for (var i = 0; i < itemsToShowOnScroll.length; i++) {
-          var e = itemsToShowOnScroll[i];
-          var top = this.getTop(e);
-          if (top < screenBottom) {
-            continue;
-          }
-          this.toShow.push(e);
-          this.hide(e);
-          this.nextEventY = this.nextEventY != undefined ? this.nextEventY : top;
-        }
-      };
-
-      ShowOnScroll.prototype.handleEvent = function (e) {
-        switch (e.type) {
-          case "scroll":
-            this.onScroll();
-            break;
-          case "resize":
-            this.resetScrolling();
-            break;
-        }
-      };
-
-      ShowOnScroll.prototype.init = function () {
-        this.resetScrolling();
-        window.addEventListener("scroll", this);
-        window.addEventListener("resize", this);
-      };
-
-      // After anima-src
-      setTimeout(function () {
-        var instShowOnScroll = new ShowOnScroll();
-        instShowOnScroll.init();
-      }, 250);
-    </script>
-  </body>
+</body>
+<script src="./assests/JS/script.js"></script>
 
 
-  
+
 </html>
