@@ -43,6 +43,8 @@
   height: 1024px;
   position: relative;
   width: 1440px;
+  display: inline-block;
+  justify-content: center;
 }
 
 .desktop-1 .rectangle-18 {
@@ -92,18 +94,19 @@
   color: var(--white);
   font-family: var(--font-family-inter);
   font-size: var(--font-size-xxl);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0;
-  margin-left: 49px;
+  margin-left: 125px;
   min-height: 27px;
   text-shadow: 0px 4px 4px #00000040;
   width: 290px;
+  text-align: center;
 }
 
 .desktop-1 .rectangle-17 {
   background-color: var(--san-marino);
-  height: 148px;
-  margin-top: 30px;
+  height: 175px;
+  margin-top: 15px;
   width: 596px;
 }
 
@@ -663,4 +666,11 @@ transform: translate(0,0);
 
 }
 
-
+.drinkweek1, .drinkweek2, .drinkweek3 {
+  width: 150px;
+  height: 150px;
+  padding: 10px 10px;
+  margin-top: 10px;
+  background: var(--san-marino);
+  border: none;
+}

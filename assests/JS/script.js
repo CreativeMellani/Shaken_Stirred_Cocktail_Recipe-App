@@ -185,3 +185,39 @@ function ShowOnScroll() {
     var instShowOnScroll = new ShowOnScroll();
     instShowOnScroll.init();
   }, 250);
+
+
+//   ELAINE: Fetch API (I commented out as it disabled the modal)
+// fetch('https://api.api-ninjas.com/v1/cocktail?name=margarita', {
+//     method: 'GET'
+//     headers: {
+//         'Content-Type': 'application/json'
+//         'X-Api-Key': 'hMzMH+MBft5+cJHF/Lmajw==dN7wK4DXcPXKuOva'}
+// })
+// .then(function (response) {
+//     return response.json()
+// }).then(function(data) {
+//     console.log(data)
+// })
+
+
+// fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic")
+// .then(function (response) {
+//     return response.json()
+// }).then(function(data) {
+//     console.log(data)
+// })
+
+//  ELAINE: I'm going to use jquery on this one as backup since I haven't had luck pulling the API Ninja using fetch
+// $.ajax({
+//     // method: 'GET',
+//     url: 'https://api.api-ninjas.com/v1/cocktail?name=' + name,
+//     headers: { 'X-Api-Key': 'hMzMH+MBft5+cJHF/Lmajw==dN7wK4DXcPXKuOva'},
+//     contentType: 'application/json',
+//     success: function(result) {
+//         console.log(result);
+//     },
+//     error: function ajaxError(jqXHR) {
+//         console.error('Error: ', jqXHR.responseText);
+//     }
+// });
