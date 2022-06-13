@@ -187,7 +187,13 @@ function ShowOnScroll() {
   }, 250);
 
 
-//   ELAINE: Fetch API (I commented out as it disabled the modal)
+//   ELAINE: Drink of the Week fucntion (I commented out  fetch api as it disabled the modal)
+var drinkOne = document.getElementById("drinkweek1")
+drinkOne.addEventListener("click", function(){
+    
+})
+
+
 // fetch('https://api.api-ninjas.com/v1/cocktail?name=margarita', {
 //     method: 'GET'
 //     headers: {
