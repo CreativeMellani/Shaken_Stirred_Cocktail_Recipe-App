@@ -22,7 +22,7 @@ then full recipe is shown
 
 Server-side APIs:
 1. https://api-ninjas.com/api/cocktail
-2. https://www.thecocktaildb.com/api.php
+2. www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
 3. https://bulma.io/s
 
 
