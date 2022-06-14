@@ -1,8 +1,6 @@
-// var drinkOfWeek;
+
 
 //MJ:When asked dirnking age 
-//Then use is prensented with alcholic 
-
 //MJ:This function makes the modal popup once the browser is opened
 
 function openModalOnRefresh(){
@@ -10,7 +8,6 @@ function openModalOnRefresh(){
     modalDiv.classList.add('is-active');
 }
 openModalOnRefresh()
-
 
 //MJ:Age Restriction Modal
 //if yes
@@ -37,25 +34,6 @@ under21.addEventListener("click", function(){
 //MJ: Drink Randomizer
 const getDrinkBtn = document.getElementById ("drinkRandomizer");
 const cocktailContainer = document.getElementById ("cocktails");
-
-// getDrinkBtn.addEventListener("click",function(){
-//   fetch('https://api.api-ninjas.com/v1/cocktail?name=')
-//     .then(res => res.json())
-//     .then(res => {
-//     createDrink (res.drinks[0])
-//     })
-// })
-
-// function createDrink(cocktails){
-//   cocktailContainer.innerHTML = `
-//     <div class="row">
-//       <div class="column five">
-//       />
-//       </div>
-//     </div>
-//   `;
-
-// }
 
 
 
