@@ -1,4 +1,4 @@
-
+// var drinkOfWeek;
 
 //MJ:When asked dirnking age 
 //Then use is prensented with alcholic 
@@ -187,43 +187,28 @@ function ShowOnScroll() {
   }, 250);
 
 
-//   ELAINE: Drink of the Week fucntion (I commented out  fetch api as it disabled the modal)
-var drinkOne = document.getElementById("drinkweek1")
-drinkOne.addEventListener("click", function(){
-    
+//   ELAINE: Drink of the Week function & modal
+
+$(".drinkweekbtn").click(function() {
+  $(".ingredient-list").empty();
+  var drinkOfWeek = $(this).text()
+  $("#drink-week-ingredient").addClass("is-active");
+  $.ajax({
+    method: 'GET',
+    url: 'https://api.api-ninjas.com/v1/cocktail?name=' + drinkOfWeek,
+    headers: { 'X-Api-Key': 'hMzMH+MBft5+cJHF/Lmajw==dN7wK4DXcPXKuOva'},
+    contentType: 'application/json',
+    success: function(result) {
+      var ingredients = result[0].ingredients;
+      for (var i = 0; i < ingredients.length; i++) {   
+        var ingredientList = $("<li>").text(ingredients[i]);
+        $(".ingredient-list").append(ingredientList);
+      }
+      $(".ingredient-list").append("Intructions: " + result[0].instructions);
+    },
+    error: function ajaxError(jqXHR) {
+      console.error('Error: ', jqXHR.responseText);
+    }
+  });
 })
 
-
-// fetch('https://api.api-ninjas.com/v1/cocktail?name=margarita', {
-//     method: 'GET'
-//     headers: {
-//         'Content-Type': 'application/json'
-//         'X-Api-Key': 'hMzMH+MBft5+cJHF/Lmajw==dN7wK4DXcPXKuOva'}
-// })
-// .then(function (response) {
-//     return response.json()
-// }).then(function(data) {
-//     console.log(data)
-// })
-
-
-// fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic")
-// .then(function (response) {
-//     return response.json()
-// }).then(function(data) {
-//     console.log(data)
-// })
-
-//  ELAINE: I'm going to use jquery on this one as backup since I haven't had luck pulling the API Ninja using fetch
-// $.ajax({
-//     // method: 'GET',
-//     url: 'https://api.api-ninjas.com/v1/cocktail?name=' + name,
-//     headers: { 'X-Api-Key': 'hMzMH+MBft5+cJHF/Lmajw==dN7wK4DXcPXKuOva'},
-//     contentType: 'application/json',
-//     success: function(result) {
-//         console.log(result);
-//     },
-//     error: function ajaxError(jqXHR) {
-//         console.error('Error: ', jqXHR.responseText);
-//     }
-// });

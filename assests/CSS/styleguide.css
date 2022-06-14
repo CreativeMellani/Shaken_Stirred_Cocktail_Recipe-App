@@ -662,7 +662,7 @@ transform: translate(0,0);
   box-sizing: border-box;
 }
 
-.drinkweek1, .drinkweek2, .drinkweek3 {
+.drinkweekbtn {
   width: 150px;
   height: 150px;
   padding: 10px 10px;
@@ -673,7 +673,18 @@ transform: translate(0,0);
 
 }
 
-.drinkweek1:hover, .drinkweek2:hover, .drinkweek3:hover {
+.drinkweekbtn:hover {
   opacity: 1.0;
 }
 
+/* #drink-week-ingredient {
+
+
+  
+
+} */
+
+ .ingredient-list, #ingredient-title {
+  color: white;
+  font-size: x-large;
+}
