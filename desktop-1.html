@@ -13,6 +13,7 @@
   <style></style>
   <link rel="stylesheet" type="text/css" href="assests/CSS/styleguide.css" />
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
 </head>
 
 <body style="margin: 0; background: #ffffff">
@@ -20,8 +21,9 @@
     <div class="shaken-stirred-cocktail-recipe-app-1 bp3-animate-enter"></div>
   </header>
 
-   <!-- MJ:Updated modal using bulma api -->
-   <div id="modal-js-example" class="modal">
+  <!-- MJ:Updated modal using bulma api -->
+
+  <div id="modal-js-example" class="modal">
 
     <div class="modal-background"></div>
 
@@ -45,36 +47,38 @@
 
     <div class="modal-content">
       <div class="box">
-        <h1 class="h3"> you are under age</h1>
+        <h1 class="h3"> You are under the legal drinking age!</h1>
        
         <!-- Your content -->
-        <button id="over21" class="open-btn"> Hello</button>
-        <button id="under21" class="close-btn">Bye</button>
+        <iframe src="https://giphy.com/embed/j7oJBkbMRnsWI" width="480" height="441" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/superbad-j7oJBkbMRnsWI"></a></p>
+        <!-- <button id="over21" class="open-btn"> Hello</button> -->
+        <button id="under21" class="close-btn"> Get out of here kid!</button>
       </div>
     </div>
     <button class="modal-close is-large" aria-label="close"></button>
   </div>
 
   <!-- Doug: -->
+  </div>
   <div>
     <input type="hidden" id="anPageName" name="page" value="desktop-1" />
     <div class="container-center-horizontal">
       <div class="iphone-13-13-pro-1 screen">
-        <div class="rectangle-17-2">
-        </div>
+        <div class="rectangle-17-2"></div>
+
+        <div class="drink-of-the-week-2">Drink of the week!</div>
+        <img class="rectangle-18-2" src="assests/img/rectangle-18-2@2x.svg" />
+
+        <img class="old-fashioned-2" src="assests/img/old-fashioned-2@1x.png" />
       </div>
     </div>
     <div class="container-center-horizontal">
       <div class="desktop-1 screen">
         <div class="overlap-group">
-          <div class="rectangle-18">
-            <h4>Drink Search </h4>
-            <input type="text" class="search-input is-normal" placeholder="Enter Drink Name">
-            <button type="submit" class="search-btn">Search</button>
-            <ul class="search-ingredients"></ul>
-          </div>
-          
-         <!-- MJ :drink randomizer trigger button -->
+          <img class="rectangle-18" src="assests/img/rectangle-18-1@1x.svg" />
+
+
+          <!-- MJ :drink randomizer trigger button -->
           <div id="drinkRandomizer" class="modal">
             <div class="modal-background"></div>
             <div class="modal-card">
@@ -89,50 +93,53 @@
                 <iframe src="https://giphy.com/embed/l46CCfwNTZ1ylwk3C" width="480" height="480" frameBorder="0"
                   class="giphy-embed" allowFullScreen></iframe>
                 <p><a href="https://giphy.com/gifs/love-lemonade-lazy-mom-l46CCfwNTZ1ylwk3C"></a></p>
-
-    
-              <footer class="modal-card-foot">
-                <button class="button is-success">Save changes</button>
-                <button class="button">Cancel</button>
-              </footer>
-           </div>
-          </div> 
-          <!-- ELAINE: added modal for ingredient list for drink of week -->
-          <div class="modal" id="drink-week-ingredient">
-            <div class="modal-background"></div>
-            <div class="modal-content" id="ingredient-title">
-              Ingredients:
-              <ul class="ingredient-list" ></ul>
+        
+                <footer class="modal-card-foot">
+                  <button class="button is-success">Save changes</button>
+                  <button class="button">Cancel</button>
+                </footer>
             </div>
-            <button class="modal-close is-large" aria-label="close"></button>
           </div>
+
+
+
 
           <div class="flex-col">
             <div class="flex-row">
-              <img class="pexels-lisa-fotios-109275-1" src="assests/img/pexels-lisa-fotios-109275-1@2x.png"/>
+              <img class="pexels-lisa-fotios-109275-1" src="assests/img/pexels-lisa-fotios-109275-1@2x.png" />
               <div class="flex-col-1">
                 <div class="drink-of-the-week">Drink of the week!</div>
-              <div class="rectangle-17 has-text-centered is-full">
-                <!-- ELAINE: added three drinks of the week -->
-                <button class="drinkweekbtn"><img src="https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg">Old-Fashioned</button>
-                <button class="drinkweekbtn"><img src="https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg">Long Island Iced Tea</button>
-                <button class="drinkweekbtn"><img src="https://www.thecocktaildb.com/images/media/drink/6ck9yi1589574317.jpg">Martini</button>
+                <div class="rectangle-17 has-text-centered is-full">
+                  <!-- ELAINE: added three drinks of the week -->
+                  <button class="drinkweek1" id="drinkweek1"><img
+                      src="https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg">Old Fashioned</button>
+                  <button class="drinkweek2"><img
+                      src="https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg">Long Island Iced
+                    Tea</button>
+                  <button class="drinkweek3"><img
+                      src="https://www.thecocktaildb.com/images/media/drink/6ck9yi1589574317.jpg">Dry Martini</button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="flex-col-2">
-            <div class="flex-row-1">
-              <img class="blended-drink-1" src="assests/img/blended-drink-1@2x.png" />
-              <img class="flex-row-item" src="assests/img/2-drinks-1@2x.png" />
-              <img class="flex-row-item" src="assests/img/tropical-3-1@2x.png" />
+            <div class="flex-col-2">
+              <div class="flex-row-1">
+                <img class="blended-drink-1" src="assests/img/blended-drink-1@2x.png" />
+                <img class="flex-row-item" src="assests/img/2-drinks-1@2x.png" />
+                <img class="flex-row-item" src="assests/img/tropical-3-1@2x.png" />
+              </div>
+              <p class="by-accessing-this-si">
+                By accessing this Site, you acknowledge that there is a government warning concerning the health effects
+                of consuming alcoholic beverages:<br />Government warning: (1) According to the Surgeon General, women
+                should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2)
+                Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may
+                cause health problems. Drink responsibly.
+              </p>
             </div>
-          <p class="by-accessing-this-si">
-            By accessing this Site, you acknowledge that there is a government warning concerning the health effects of consuming alcoholic beverages:<br />Government warning: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems. Drink responsibly.
-          </p>
           </div>
-        </div>
-        <img class="pexels-anna-tukhfatu" src="assests/img/pexels-anna-tukhfatullina-food-photographerstylist-2611816-1@2x.png"/>
-          <!-- MJ :drink randomizer trigger button -->
+          <img class="pexels-anna-tukhfatu"
+            src="assests/img/pexels-anna-tukhfatullina-food-photographerstylist-2611816-1@2x.png" />
+          <div class="rectangle-19">
+            <!-- MJ :drink randomizer trigger button -->
             <button class="js-modal-trigger" data-target="drinkRandomizer">
               Drink Randomizer, Get the party started!
             </button>
@@ -146,44 +153,38 @@
         </div>
       </div>
     </div>
-
-
-
-  <!-- <div class="container-center-horizontal">
-    <div class="ipad-pro-11-1 screen">
-      <div class="overlap-group2">
-        <img class="old-fashioned-1" src="img/old-fashioned-1@1x.png" />
-        <img class="rectangle-18-1" src="img/rectangle-18-1@1x.svg" />
-        <p class="by-accessing-this-si-1">
-          By accessing this Site, you acknowledge that there is a government warning concerning the health effects of
-          consuming alcoholic beverages: Government warning: (1) According to the Surgeon General, women should
-          not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of
-          alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.
-          Drink responsibly.
-        </p>
-        <div class="rectangle-17-1"></div>
-        <div class="are-you-21-and-over-1">Are you 21 and over?</div>
+    <div class="container-center-horizontal">
+      <div class="ipad-pro-11-1 screen">
+        <div class="overlap-group2">
+          <img class="old-fashioned-1" src="assests/img/old-fashioned-2@1x.png" />
+          <img class="rectangle-18-1" src="assests/img/rectangle-18-1@1x.svg" />
+          <p class="by-accessing-this-si-1">
+            By accessing this Site, you acknowledge that there is a government warning concerning the health effects of
+            consuming alcoholic beverages:<br />Government warning: (1) According to the Surgeon General, women should
+            not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of
+            alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.
+            Drink responsibly.
+          </p>
+          <div class="rectangle-17-1"></div>
+          <div class="are-you-21-and-over-1">Are you 21 and over?</div>
           <div class="shaken-stirred-cocktail-recipe-app bp2-animate-enter" show-on-scroll>
             Shaken &amp; Stirred Cocktail Recipe App
           </div>
-          <img class="pexels-lisa-fotios-109275-1-1" src="img/pexels-lisa-fotios-109275-1-1@2x.png" />
-          <img class="blended-drink-1-1" src="img/blended-drink-1-1@2x.png" />
-          <img class="x2-drinks-1" src="img/2-drinks-1-1@2x.png" />
-        <div class="overlap-group-1">
-          <div class="yes-1 valign-text-middle inter-normal-black-24px">YES</div>
-        </div>
-        <div class="overlap-group1-1">
-          <div class="place-1 valign-text-middle inter-normal-black-24px">NO</div>
+          <img class="pexels-lisa-fotios-109275-1-1" src="assests/img/pexels-lisa-fotios-109275-1@2x.png" />
+          <img class="blended-drink-1-1" src="assests/img/blended-drink-1@2x.png" />
+          <img class="x2-drinks-1" src="assests/img/2-drinks-1@2x.png" />
+          <div class="overlap-group-1">
+            <div class="yes-1 valign-text-middle inter-normal-black-24px">YES</div>
+          </div>
+          <div class="overlap-group1-1">
+            <div class="place-1 valign-text-middle inter-normal-black-24px">NO</div>
+          </div>
         </div>
       </div>
     </div>
-  </div> -->
 
 </body>
-
-
 <script src="./assests/JS/script.js"></script>
-
 <script type="text/javascript">
   // MJ: Added a session so the modal wouldnt use the local storage to trigger the modal. 
   $(document).ready(function() {
@@ -192,5 +193,8 @@
           sessionStorage.setItem('#modal-js-example','true');     
       }
   });
+ </script>
+
+
 
 </html>
