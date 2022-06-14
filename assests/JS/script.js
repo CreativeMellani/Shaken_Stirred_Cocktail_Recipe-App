@@ -1,13 +1,16 @@
 
 
 //MJ:When asked dirnking age 
+//Then use is prensented with alcholic 
+
 //MJ:This function makes the modal popup once the browser is opened
 
-function openModalOnRefresh(){
-    const modalDiv = document.getElementById('modal-js-example')
-    modalDiv.classList.add('is-active');
-}
-openModalOnRefresh()
+// function openModalOnRefresh(){
+//     const modalDiv = document.getElementById('modal-js-example')
+//     // modalDiv.classList.add('is-active');
+// }
+// openModalOnRefresh()
+
 
 //MJ:Age Restriction Modal
 //if yes
@@ -34,6 +37,25 @@ under21.addEventListener("click", function(){
 //MJ: Drink Randomizer
 const getDrinkBtn = document.getElementById ("drinkRandomizer");
 const cocktailContainer = document.getElementById ("cocktails");
+
+// getDrinkBtn.addEventListener("click",function(){
+//   fetch('https://api.api-ninjas.com/v1/cocktail?name=')
+//     .then(res => res.json())
+//     .then(res => {
+//     createDrink (res.drinks[0])
+//     })
+// })
+
+// function createDrink(cocktails){
+//   cocktailContainer.innerHTML = `
+//     <div class="row">
+//       <div class="column five">
+//       />
+//       </div>
+//     </div>
+//   `;
+
+// }
 
 
 
@@ -80,26 +102,10 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-// MJ: adding to Elain's code to call the api and randomize the cocktail recipe
-function callCocktailApi(name){
-  $.ajax({
-    method: 'GET',
-    url: 'https://api.api-ninjas.com/v1/cocktail?name=' + name,
-    headers: { 'X-Api-Key': 'hMzMH+MBft5+cJHF/Lmajw==dN7wK4DXcPXKuOva'},
-    contentType: 'application/json',
-    success: function(result) {
-        console.log(result);
-    },
-    error: function ajaxError(jqXHR) {
-        console.error('Error: ', jqXHR.responseText);
-    }
-});
 
-}
 
-let randomizeDrinkBtn = document.getElementById('randomizeDrinkBtn')
 
-randomizeDrinkBtn.addEventListener('click', callCocktailApi('margarita'))
+
 
 //Doug: Title Animation
 function ShowOnScroll() {
@@ -204,58 +210,64 @@ function ShowOnScroll() {
   }, 250);
 
 
-//   ELAINE: Drink of the Week function & modal
-
-$(".drinkweekbtn").click(function() {
-  $(".ingredient-list").empty();
-  var drinkOfWeek = $(this).text()
-  $("#drink-week-ingredient").addClass("is-active");
+//   ELAINE: Drink of the Week fucntion (I commented out  fetch api as it disabled the modal)
+var drinkOne = document.getElementById("drinkweek1")
+drinkOne.addEventListener("click", function(){
+    
+})
+// MJ: adding to Elain's code to call the api and randomize the cocktail recipe
+function callCocktailApi(name){
   $.ajax({
     method: 'GET',
-    url: 'https://api.api-ninjas.com/v1/cocktail?name=' + drinkOfWeek,
+    url: 'https://api.api-ninjas.com/v1/cocktail?name=' + name,
     headers: { 'X-Api-Key': 'hMzMH+MBft5+cJHF/Lmajw==dN7wK4DXcPXKuOva'},
     contentType: 'application/json',
     success: function(result) {
-      var ingredients = result[0].ingredients;
-      for (var i = 0; i < ingredients.length; i++) {   
-        var ingredientList = $("<li>").text(ingredients[i]);
-        $(".ingredient-list").append(ingredientList);
-      }
-      $(".ingredient-list").append("Intructions: " + result[0].instructions);
+        console.log(result);
     },
     error: function ajaxError(jqXHR) {
-      console.error('Error: ', jqXHR.responseText);
+        console.error('Error: ', jqXHR.responseText);
     }
-  });
-})
+});
+
+  // fetch('https://api.api-ninjas.com/v1/cocktail?name='+name, {
+  //     method: 'GET'
+  //     headers: {
+  //         'Content-Type': 'application/json',
+  //         'X-Api-Key': 'hMzMH+MBft5+cJHF/Lmajw==dN7wK4DXcPXKuOva'
+  //       }
+  // })
+  // .then(function (response) {
+  //   console.log(response)
+  //     return response.json()
+  // }).then(function(data) {
+  //     console.log(data)
+  // })
+}
+
+let randomizeDrinkBtn = document.getElementById('randomizeDrinkBtn')
+
+randomizeDrinkBtn.addEventListener('click', callCocktailApi('margarita'))
 
 
-// DOUG: Search Bar
-var searchBtn = $(".search-btn");
-searchBtn.click(function() {
-    $(".search-ingredients").empty();
-    var searchInput = $(".search-input").val();
-    if (searchInput == "") {
-    } else {
-      console.log(searchInput)
-        $.ajax({
-          method: 'GET',
-          url: 'https://api.api-ninjas.com/v1/cocktail?name=' + searchInput,
-          headers: { 'X-Api-Key': 'hMzMH+MBft5+cJHF/Lmajw==dN7wK4DXcPXKuOva'},
-          contentType: 'application/json',
-          success: function(result) {
-            var ingredients = result[0].ingredients;
-            console.log(ingredients)
-            $(".search-ingredients").text("Ingredients:")
-            for (var i = 0; i < ingredients.length; i++) {   
-              var searchIngredient = $("<li>").text(ingredients[i]);
-              $(".search-ingredients").append(searchIngredient);
-            }
-            $(".search-ingredients").append("Intructions: " + result[0].instructions);
-          },
-          error: function ajaxError(jqXHR) {
-            console.error('Error: ', jqXHR.responseText);
-          }
-        });    
-    }
-})
+
+// fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic")
+// .then(function (response) {
+//     return response.json()
+// }).then(function(data) {
+//     console.log(data)
+// })
+
+//  ELAINE: I'm going to use jquery on this one as backup since I haven't had luck pulling the API Ninja using fetch
+// $.ajax({
+//     // method: 'GET',
+//     url: 'https://api.api-ninjas.com/v1/cocktail?name=' + name,
+//     headers: { 'X-Api-Key': 'hMzMH+MBft5+cJHF/Lmajw==dN7wK4DXcPXKuOva'},
+//     contentType: 'application/json',
+//     success: function(result) {
+//         console.log(result);
+//     },
+//     error: function ajaxError(jqXHR) {
+//         console.error('Error: ', jqXHR.responseText);
+//     }
+// });
