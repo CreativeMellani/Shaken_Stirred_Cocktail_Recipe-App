@@ -231,13 +231,18 @@ function ShowOnScroll() {
 //DS-making search bar with coktail DB fecth API//
 
 function searchdrink(query){
-  const url = 'www.thecocktaildb.com/api/json/v1/1/search.php?s=${query}';
+  const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' +query;
   fetch(url)
   .then(response => response.json())
   .then((jsonData) =>  {
     const results = jsonData.map(element => element.drink.name);
     renderresults(results);
-});
+    document.getelementbyid("errormessage").innerhtml = "";
+})
+  .catch((error) => {
+      document.getelementbyid("errormessage").innerhtml = error;
+
+  });
 }
 
 function renderresults(results) {
@@ -253,6 +258,10 @@ let searchtimeouttoken = 0;
 window.onload = () => {
   const searchfieldelement = document.getelementbyid("searchfield");
   searchfieldelement.onkeyup = (event) => {
+    clearTimeout(searchtimeouttoken);
+    if(searchfieldelement.trim().length === 0){
+      return;
+    }
     searchtimeouttoken = setTimeout(() => {
       searchdrink(searchfieldelement.value);
     }, 250);
