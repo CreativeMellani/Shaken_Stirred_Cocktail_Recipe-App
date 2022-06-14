@@ -188,10 +188,10 @@ function ShowOnScroll() {
 
 
 //   ELAINE: Drink of the Week fucntion (I commented out  fetch api as it disabled the modal)
-var drinkOne = document.getElementById("drinkweek1")
-drinkOne.addEventListener("click", function(){
+//var drinkOne = document.getElementById("drinkweek1")
+//drinkOne.addEventListener("click", function(){
     
-})
+//})
 
 
 // fetch('https://api.api-ninjas.com/v1/cocktail?name=margarita', {
@@ -227,3 +227,35 @@ drinkOne.addEventListener("click", function(){
 //         console.error('Error: ', jqXHR.responseText);
 //     }
 // });
+
+//DS-making search bar with coktail DB fecth API//
+
+function searchdrink(query){
+  const url = 'www.thecocktaildb.com/api/json/v1/1/search.php?s=${query}';
+  fetch(url)
+  .then(response => response.json())
+  .then((jsonData) =>  {
+    const results = jsonData.map(element => element.drink.name);
+    renderresults(results);
+});
+}
+
+function renderresults(results) {
+ const list = document.getElementById("resultslist");
+ results.foreach(result => {
+    const element = document.createElement("li");
+    element.innerText = result;
+    list.appendchild(element);
+ });
+}
+
+let searchtimeouttoken = 0;
+window.onload = () => {
+  const searchfieldelement = document.getelementbyid("searchfield");
+  searchfieldelement.onkeyup = (event) => {
+    searchtimeouttoken = setTimeout(() => {
+      searchdrink(searchfieldelement.value);
+    }, 250);
+      
+  };
+}

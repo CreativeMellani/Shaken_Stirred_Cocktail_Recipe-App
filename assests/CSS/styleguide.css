@@ -30,7 +30,7 @@
   align-items: flex-start;
   background-color: var(--white);
   display: flex;
-  width: 1440px;
+  width: 100%;
 }
 
 .desktop-1 .overlap-group {
@@ -39,7 +39,7 @@
   background-size: cover;
   height: 1024px;
   position: relative;
-  width: 1440px;
+  width: 100%;
   display: inline-block;
   justify-content: center;
   opacity: 1;
@@ -49,7 +49,7 @@
   height: 1175px;
   left: 875px;
   position: absolute;
-  /* top: 150px; */
+  top: 200px;
   width: 516px;
 }
 
@@ -220,6 +220,14 @@
   top: 0;
   width: 108px;
 }
+
+#searchfield{
+  height: 30px;
+  width:  250px;
+
+}
+
+
 
 .desktop-1 .button-no {
   background-color: var(--perano);
