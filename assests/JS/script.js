@@ -212,3 +212,33 @@ $(".drinkweekbtn").click(function() {
   });
 })
 
+
+// DOUG: Search Bar
+var searchBtn = $(".search-btn");
+searchBtn.click(function() {
+    $(".search-ingredients").empty();
+    var searchInput = $(".search-input").val();
+    if (searchInput == "") {
+    } else {
+      console.log(searchInput)
+        $.ajax({
+          method: 'GET',
+          url: 'https://api.api-ninjas.com/v1/cocktail?name=' + searchInput,
+          headers: { 'X-Api-Key': 'hMzMH+MBft5+cJHF/Lmajw==dN7wK4DXcPXKuOva'},
+          contentType: 'application/json',
+          success: function(result) {
+            var ingredients = result[0].ingredients;
+            console.log(ingredients)
+            $(".search-ingredients").text("Ingredients:")
+            for (var i = 0; i < ingredients.length; i++) {   
+              var searchIngredient = $("<li>").text(ingredients[i]);
+              $(".search-ingredients").append(searchIngredient);
+            }
+            $(".search-ingredients").append("Intructions: " + result[0].instructions);
+          },
+          error: function ajaxError(jqXHR) {
+            console.error('Error: ', jqXHR.responseText);
+          }
+        });    
+    }
+})

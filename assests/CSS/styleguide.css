@@ -47,9 +47,9 @@
 
 .desktop-1 .rectangle-18 {
   height: 1175px;
-  left: 875px;
+  left: 950px;
   position: absolute;
-  /* top: 150px; */
+  top: 200px;
   width: 516px;
 }
 
@@ -677,14 +677,7 @@ transform: translate(0,0);
   opacity: 1.0;
 }
 
-/* #drink-week-ingredient {
-
-
-  
-
-} */
-
- .ingredient-list, #ingredient-title {
+ .ingredient-list, #ingredient-title, .rectangle-18 h4  {
   color: white;
   font-size: x-large;
 }
