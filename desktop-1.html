@@ -20,9 +20,11 @@
     <div class="shaken-stirred-cocktail-recipe-app-1 bp3-animate-enter"></div>
   </header>
 
-  <!-- MJ:Updated modal using bulma api -->
-  <div id="modal-js-example" class="modal">
+   <!-- MJ:Updated modal using bulma api -->
+   <div id="modal-js-example" class="modal">
+
     <div class="modal-background"></div>
+
     <div class="modal-content">
       <div class="box">
         <h1 class="h3"> Are you 21 and over?</h1>
@@ -32,6 +34,22 @@
         <!-- Your content -->
         <button id="over21" class="open-btn"> Yes, first round is on me!</button>
         <button id="under21" class="close-btn">No</button>
+      </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <div id="modal-under21" class="modal">
+
+    <div class="modal-background"></div>
+
+    <div class="modal-content">
+      <div class="box">
+        <h1 class="h3"> you are under age</h1>
+       
+        <!-- Your content -->
+        <button id="over21" class="open-btn"> Hello</button>
+        <button id="under21" class="close-btn">Bye</button>
       </div>
     </div>
     <button class="modal-close is-large" aria-label="close"></button>
@@ -56,7 +74,7 @@
             <ul class="search-ingredients"></ul>
           </div>
           
-          <!-- MJ :drink randomizer trigger button -->
+         <!-- MJ :drink randomizer trigger button -->
           <div id="drinkRandomizer" class="modal">
             <div class="modal-background"></div>
             <div class="modal-card">
@@ -64,11 +82,14 @@
                 <p class="modal-card-title">Choose your ingredients:</p>
                 <button class="delete" aria-label="close"></button>
               </header>
-
               <section class="modal-card-body">
-              <!-- Content ... -->
-                <iframe src="https://giphy.com/embed/l46CCfwNTZ1ylwk3C" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/love-lemonade-lazy-mom-l46CCfwNTZ1ylwk3C"></a></p>
-         
+                <!-- Content ... -->
+
+                <button id="randomizeDrinkBtn"> Randomize Drinks </button>
+                <iframe src="https://giphy.com/embed/l46CCfwNTZ1ylwk3C" width="480" height="480" frameBorder="0"
+                  class="giphy-embed" allowFullScreen></iframe>
+                <p><a href="https://giphy.com/gifs/love-lemonade-lazy-mom-l46CCfwNTZ1ylwk3C"></a></p>
+
                 <!-- <div>
                   Spirits & Liqueurs
                 </div>
@@ -160,18 +181,20 @@
           </div>
         </div>
         <img class="pexels-anna-tukhfatu" src="assests/img/pexels-anna-tukhfatullina-food-photographerstylist-2611816-1@2x.png"/>
-        <!-- MJ :drink randomizer trigger button -->
-        <div class="rectangle-19">
-          <button class="js-modal-trigger" data-target="drinkRandomizer">Drink Randomizer, Get the party started!</button>
-        </div>
-        <div class="flex-col-3">
-          <h1 class="title bp1-animate-enter">Shaken &amp; Stirred Cocktail Recipe App</h1>
-          <div class="overlap-group1">
+          <!-- MJ :drink randomizer trigger button -->
+            <button class="js-modal-trigger" data-target="drinkRandomizer">
+              Drink Randomizer, Get the party started!
+            </button>
+          </div>
+          <div class="flex-col-3">
+            <h1 class="title bp1-animate-enter">Shaken &amp; Stirred Cocktail Recipe App</h1>
+            <div class="overlap-group1">
+
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
 
 
@@ -209,5 +232,14 @@
 
 
 <script src="./assests/JS/script.js"></script>
+
+<script type="text/javascript">
+  // MJ: Added a session so the modal wouldnt use the local storage to trigger the modal. 
+  $(document).ready(function() {
+      if (sessionStorage.getItem('#modal-js-example') !== 'true') {
+          document.getElementById('modal-js-example').classList.add('is-active');
+          sessionStorage.setItem('#modal-js-example','true');     
+      }
+  });
 
 </html>

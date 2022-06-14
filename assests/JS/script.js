@@ -15,18 +15,47 @@ openModalOnRefresh()
 //MJ:Age Restriction Modal
 //if yes
 var over21 = document.getElementById("over21");
+const modalDiv = document.getElementById('modal-js-example')
+const underAgeModal = document.getElementById('modal-under21')
 over21.addEventListener("click", function(){
     console.log ("over21")
+   modalDiv.classList.remove('is-active')
     localStorage.setItem("over21","true")
 })
 // if no
 var under21 = document.getElementById("under21")
 under21.addEventListener("click", function(){
     console.log ("under21")
+    modalDiv.classList.remove('is-active')
+    underAgeModal.classList.add('is-active')
     localStorage.setItem("under21","true")
 })
 
 
+
+
+//MJ: Drink Randomizer
+const getDrinkBtn = document.getElementById ("drinkRandomizer");
+const cocktailContainer = document.getElementById ("cocktails");
+
+// getDrinkBtn.addEventListener("click",function(){
+//   fetch('https://api.api-ninjas.com/v1/cocktail?name=')
+//     .then(res => res.json())
+//     .then(res => {
+//     createDrink (res.drinks[0])
+//     })
+// })
+
+// function createDrink(cocktails){
+//   cocktailContainer.innerHTML = `
+//     <div class="row">
+//       <div class="column five">
+//       />
+//       </div>
+//     </div>
+//   `;
+
+// }
 
 
 
@@ -73,16 +102,26 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
+// MJ: adding to Elain's code to call the api and randomize the cocktail recipe
+function callCocktailApi(name){
+  $.ajax({
+    method: 'GET',
+    url: 'https://api.api-ninjas.com/v1/cocktail?name=' + name,
+    headers: { 'X-Api-Key': 'hMzMH+MBft5+cJHF/Lmajw==dN7wK4DXcPXKuOva'},
+    contentType: 'application/json',
+    success: function(result) {
+        console.log(result);
+    },
+    error: function ajaxError(jqXHR) {
+        console.error('Error: ', jqXHR.responseText);
+    }
+});
 
+}
 
-// Drink Randomizer 
-//MJ:When selecting possible ingredients 
-//Then relevant recipes including selected ingredients are shown
+let randomizeDrinkBtn = document.getElementById('randomizeDrinkBtn')
 
- 
-//MJ:multiple choice/ selection here 
-//modal here
-
+randomizeDrinkBtn.addEventListener('click', callCocktailApi('margarita'))
 
 //Doug: Title Animation
 function ShowOnScroll() {
