@@ -22,18 +22,21 @@ then full recipe is shown
 
 Server-side APIs:
 1. https://api-ninjas.com/api/cocktail
-2. https://www.thecocktaildb.com/api.php
+2. www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
 3. https://bulma.io/s
 
 
 Team breakdown:
 
 Elaine: HTMl/ Flow Diagram/ Javascript: https://app.flowmapp.com/projects/275524/userflow/191194/ 
+![Screen Shot 2022-06-12 at 4 40 19 PM](https://user-images.githubusercontent.com/101590432/173258324-f00116ac-de26-405d-8675-00903c9235ef.png)
+
+
+
+MJ: Project Management/ 1st Draft Wireframe/ Javascript:![Screen Shot 2022-06-02 at 9 37 52 PM](https://user-images.githubusercontent.com/101590432/171787584-e5bd8024-ef7d-4fd1-a799-2e2065962569.png)
+
+
+
 
 Douglas: CSS/ WireFrame Javascript: https://www.figma.com/file/8DcXcozdHL2OlbLYThKlWn/Shaken-%26-Stirred-Cocktail-Mobile-App?node-id=42%3A5
 ![Screen Shot 2022-06-07 at 6 51 46 PM](https://user-images.githubusercontent.com/101590432/172514286-e6261a48-8966-4bd4-878f-43d4cc6b9d17.png)
-
-
-
-MJ: Project Management/ Wireframe/ Javascript: Wire frame:![Screen Shot 2022-06-02 at 9 37 52 PM](https://user-images.githubusercontent.com/101590432/171787584-e5bd8024-ef7d-4fd1-a799-2e2065962569.png)
-
