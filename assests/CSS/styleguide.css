@@ -30,7 +30,7 @@
   align-items: flex-start;
   background-color: var(--white);
   display: flex;
-  width: 100%;
+  width: 1440px;
 }
 
 .desktop-1 .overlap-group {
